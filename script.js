@@ -72,15 +72,17 @@ const processMessage = (e) => {
                         }
             }
 
-            if (openCount > 8) {
+            if (openCount >= 8) {
                 openCount = 0;
                 SaveToLocalStorage(openCount);
-                messageContainer.remove();
-                endingMessage.classList.remove('hidden');
-                audioMessage2.play();
-                setInterval( () => {
-                    audioMessage.play();
-                }, 2000)
+                setTimeout(()=> {
+                    messageContainer.remove();
+                    endingMessage.classList.remove('hidden');
+                    audioMessage2.play();
+                    setInterval( () => {
+                        audioMessage.play();
+                    }, 2000)
+                }, 3000); 
             }
         }, 1000);
     }
