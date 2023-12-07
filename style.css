@@ -12,6 +12,7 @@
 
 body {
     background-image: url(/imgs/1.jpg);
+    background-position-x: -20rem;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -83,6 +84,11 @@ span {
     animation: rotate 2s;
 }
 
+.card {
+    background-color: rgb(105, 165, 221);
+    color: #fff;
+}
+
 footer {
     background-color: #111;
     color: #fff;
@@ -123,6 +129,37 @@ footer p {
     border-radius: 20px;
 }
 
+.cardsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guessGameContainer {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+#shuffleBtn {
+    font-size: 1.1rem;
+    background-color: rgb(4, 68, 187);
+    padding: 6px;
+    border: 2px solid rgb(0, 94, 218);
+    border-radius: 6px;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+#shuffleBtn:hover {
+    background-color: rgb(3, 52, 143);
+    transition: .4s all ease-in-out;
+}
+
+
+.shakeCard {
+    animation: shake 1.6s;
+}
+
 @keyframes rotate {
     0% {
         transform: rotateY(0deg);
@@ -134,6 +171,28 @@ footer p {
 
     100% {
         transform: rotateY(0deg);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -169,11 +228,23 @@ footer p {
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
+
+    .cardsBox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    #shuffleBtn {
+        padding: 5px;
+        font-size: .9rem;
+    }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 491px) {
     body {
-        background-position-x: -20em;
+        background-position-x: -50em;
     }
     .myImg {
         width: 14rem;
@@ -191,6 +262,10 @@ footer p {
 
     .messageOpen {
     font-size: .7rem;
+    }
+
+    .bigMessage {
+    font-size: .8rem;
     }
 
     element.style {
@@ -212,6 +287,7 @@ footer p {
         padding: 1rem;
         margin: 1rem .6rem;
     }
+
 
     footer {
         background-color: #111;
