@@ -220,29 +220,20 @@ function processGame(e) {
                 case 1: {
                          let text = createRandMessageP(messages[0]);
                          targetElement.firstElementChild.innerText = '';
-                         let found = isFound(middleNums1);
-                         (found) 
-                         ? targetElement.appendChild(img) 
-                         :   targetElement.appendChild(text);
+                         targetElement.appendChild(text);
                          
                          break;
                         }
                 case 2: {
                          let text = createRandMessageP(messages[1]);
                          targetElement.firstElementChild.innerText = '';
-                         let found = isFound(middleNums2);
-                         (found) 
-                         ? targetElement.appendChild(img) 
-                         :   targetElement.appendChild(text);
+                         targetElement.appendChild(text);
                          break;
                         }
                 case 3: {
                          let text = createRandMessageP(messages[2]);
                          targetElement.firstElementChild.innerText = '';
-                         let found = isFound(middleNums3);
-                         (found) 
-                         ? targetElement.appendChild(img) 
-                         :   targetElement.appendChild(text);
+                         targetElement.appendChild(text);
                          break;
                 }
             }
@@ -251,16 +242,6 @@ function processGame(e) {
     }
 }
 
-function isFound(indexArrray) {
-    for (let num of indexArrray) {
-        if (indexes.includes(num)) {
-            laugh.play();
-            return true;
-        }
-    }
-
-    return false;
-}
 
 const init = () => {
     messageContainer.addEventListener('click', processMessage);
