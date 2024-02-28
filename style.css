@@ -12,7 +12,7 @@
 
 body {
     background-image: url(/imgs/1.jpg);
-    background-position-x: -20rem;
+    background-position-x: -60rem;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -49,6 +49,18 @@ span {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.header {
+    background-color: #111;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+}
+
+.header img {
+    width: 1.5rem;
+    margin:0 1rem;
 }
 
 .messageBox {
@@ -95,6 +107,14 @@ footer {
     width: 100vw;
     padding: .2rem;
     margin-top: auto;
+}
+
+.headingBox {
+    text-align: center;
+}
+
+.messageContainer .animal h4 {
+    font-weight: lighter;
 }
 
 footer p {
@@ -159,7 +179,21 @@ footer p {
 .shakeCard {
     animation: shake 1.6s;
 }
+.messageContainer .animal {
+    padding: 0;
+    flex-direction: column;
+}
 
+.messageContainer .animal h4 {
+    margin: 1rem;
+    overflow: hidden;
+}
+.messageContainer .animal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
 @keyframes rotate {
     0% {
         transform: rotateY(0deg);
@@ -198,7 +232,14 @@ footer p {
 
 @media only screen and (max-width: 768px) {
     body {
-        background-position-x: -90em;
+        background-position-x: -110em;
+    }
+
+    .messageContainer .animal h4 {
+        font-weight: lighter;
+        font-size: 1.1rem;
+        font-family: 'Playpen Sans',
+            cursive;
     }
 }
 
@@ -244,7 +285,7 @@ footer p {
 
 @media only screen and (max-width: 491px) {
     body {
-        background-position-x: -50em;
+        background-position-x: -100em;
     }
     .myImg {
         width: 14rem;
@@ -254,6 +295,14 @@ footer p {
     .heart {
         width: 5rem;
         text-align: center;
+    }
+
+    .header {
+        font-size: .7rem;
+    }
+
+    .header img {
+        width: 1rem;
     }
 
     .message {
@@ -286,6 +335,11 @@ footer p {
         height: 10em;
         padding: 1rem;
         margin: 1rem .6rem;
+    }
+
+    .messageContainer .animal h4 {
+        font-weight: lighter;
+        font-size: .8rem;
     }
 
 

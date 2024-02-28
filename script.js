@@ -1,5 +1,6 @@
 const messageContainer = document.getElementById('messageContainer');
-const guessGameContainer = document.getElementById('guessGameContainer')
+const guessGameContainer = document.getElementById('guessGameContainer');
+const AnimalsContainer = document.getElementById('animalsContainer');
 const cardsBox = document.getElementById('cardsBox');
 const endingMessage = document.getElementById('endingMessage');
 const audioMessage = document.getElementById('audioMessage');
@@ -118,12 +119,13 @@ const processMessage = (e) => {
                         }
             }
 
-            if (openCount >= 8) {
+            if (openCount >= 8 && false) {
                 openCount = 0;
                 SaveToLocalStorage(openCount);
                 setTimeout(()=> {
                     messageContainer.remove();
                     guessGameContainer.remove();
+                    AnimalsContainer.remove();
                     endingMessage.classList.remove('hidden');
                     audioMessage2.play();
                     setInterval( () => {
