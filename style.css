@@ -56,11 +56,25 @@ span {
     text-align: center;
     padding: 1rem;
     color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;;
+    z-index: 900;
 }
 
 .header img {
     width: 1.5rem;
     margin:0 1rem;
+}
+
+#start {
+    margin-top: 4rem;
+}
+
+#x {
+    color: #fff;
+    font-size: 2rem;
 }
 
 .messageBox {
@@ -118,7 +132,7 @@ footer {
 }
 
 footer p {
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 .inactive {
@@ -229,6 +243,13 @@ footer p {
         transform: rotate(0deg);
     }
 }
+
+@media only screen and (max-width: 1440px) {
+    body {
+            background-position-x: -67rem;
+    }
+}
+ 
 
 @media only screen and (max-width: 768px) {
     body {
